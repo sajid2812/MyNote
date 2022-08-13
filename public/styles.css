@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  padding: 0 1rem;
+}
+
+/* ######## header & footer ######## */
+
+header,
+footer {
+  background-color: #395b64;
+  margin: auto -1rem;
+
+  padding: 1rem 2rem;
+  box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+  font-family: cursive;
+}
+
+/* ######## body container ######## */
+
+.body_container {
+  margin: auto;
+  width: 60%;
+}
+
+.body_container .alert {
+  width: 80%;
+  margin: 1.25rem auto 0;
+  border-radius: 0.438rem;
+}
+
+/* ######## create note form ######## */
+
+form.create-note {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 1.875rem auto 1.25rem auto;
+  background: #fff;
+  padding: 0.938rem;
+  border-radius: 0.438rem;
+  box-shadow: 0 0.063rem 0.313rem rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 0.313rem;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -2.063rem;
+  margin: 0 0.313rem;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  box-shadow: 0 0.063rem 0.188rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+form.create-note .add {
+  background: #9ca3a9;
+}
+form.create-note .minimize {
+  background: #f5ba13;
+}
+form.create-note .clear {
+  background: #f14e4e;
+}
+
+/* ######## notes category heading ######## */
+
+.notesCategory_heading {
+  margin-left: 6%;
+  color: #395b64;
+}
+
+/* ######## notes container ######## */
+
+.notes_container {
+  padding-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: baseline;
+}
+
+/* ######## single note ######## */
+
+.note {
+  background: #fff;
+  border-radius: 0.438rem;
+  box-shadow: 0 0.125rem 0.313rem #ccc;
+  padding: 0.625rem;
+  width: 15rem;
+  margin: 1rem;
+}
+.note h1 {
+  color: #f5ba13;
+  font-size: 1.1em;
+  margin-bottom: 0.375rem;
+}
+.note h5 {
+  font-size: 1em;
+  margin-bottom: 0.375rem;
+  color: #395b64a1;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 0.625rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+
+.note .button_container button {
+  color: #aaaab4;
+  border: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+}
+
+.button_container .delete:hover {
+  color: #f14e4e;
+}
+.button_container .pin:hover {
+  color: #395b64;
+}
+
+/* ######## edit note pop-up ######## */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #c4c2c27a;
+}
+
+.edit-note {
+  margin-top: 1.25rem;
+}
+
+/* ######## pagination ######## */
+
+.pagination-container {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin: 1.25rem auto;
+}
+.pagination-item {
+  padding: 0 0.75rem;
+  height: 2rem;
+  text-align: center;
+  margin: auto 0.25rem;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  letter-spacing: 0.01071em;
+  border-radius: 1rem;
+  line-height: 1.43;
+  font-size: 0.813rem;
+  min-width: 2rem;
+}
+.pagination-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+.dots:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+/* ######## media query ######## */
+
+@media screen and (max-width: 1439px) {
+  .body_container {
+    width: 90%;
+    margin: auto;
+  }
+}
